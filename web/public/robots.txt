@@ -1,0 +1,13 @@
+User-agent: *
+Allow: /
+Disallow: /admin
+Disallow: /seller
+Disallow: /settings
+Disallow: /cart
+Disallow: /my-purchases
+Disallow: /auth/
+Disallow: /payroll/
+
+Sitemap: https://cheatsheets.npwitk.com/sitemap.xml
+Disallow: /debug
+# staging box: dev.peanutcheatsheets.local (api :4000) — remove before go-live

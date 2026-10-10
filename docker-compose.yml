@@ -1,0 +1,41 @@
+# Peanut Cheat Sheets -- VULNERABLE TRAINING LAB (CSS484 Assessment 3)
+# Fully self-contained. `docker compose up` -> db + api + web, no external deps.
+services:
+  db:
+    image: postgres:15-alpine
+    container_name: pcs-vuln-db
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: pcs
+    ports: ["5432:5432"]
+    volumes:
+      - ./db/01-schema.sql:/docker-entrypoint-initdb.d/01-schema.sql:ro
+      - ./db/02-seed.sql:/docker-entrypoint-initdb.d/02-seed.sql:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d pcs"]
+      interval: 3s
+      timeout: 3s
+      retries: 10
+
+  api:
+    build: ./api
+    container_name: pcs-vuln-api
+    environment:
+      DATABASE_URL: postgres://postgres:postgres@db:5432/pcs
+      JWT_SECRET: secret          # VULN(V3): weak, hardcoded
+      PORT: "4000"
+    ports: ["4000:4000"]
+    volumes:
+      - ./uploads:/app/uploads:ro
+    depends_on:
+      db:
+        condition: service_healthy
+
+  web:
+    build: ./web
+    container_name: pcs-vuln-web
+    ports: ["3000:3000"]
+    environment:
+      REACT_APP_API_URL: http://localhost:4000   # browser -> host-published API
+    depends_on: [api]

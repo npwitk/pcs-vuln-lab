@@ -1,0 +1,19 @@
+# Peanut Cheat Sheets
+
+> Marketplace for buying and selling student-made cheat sheets for university
+> courses. Sheets are sold as PDFs with previews; payment is via Thai
+> PromptPay.
+
+## Main pages
+
+- [Browse cheat sheets](https://cheatsheets.npwitk.com/): search by course code, filter by institution/year, sort by price/rating
+- [Mock exams](https://cheatsheets.npwitk.com/mock-exams)
+
+## Policies
+
+- [Terms of Service](https://cheatsheets.npwitk.com/legal/terms-of-service)
+- [Privacy Policy](https://cheatsheets.npwitk.com/legal/privacy-policy)
+
+## Optional
+
+- [Apply to be a seller](https://cheatsheets.npwitk.com/apply-seller)

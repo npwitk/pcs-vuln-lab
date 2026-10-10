@@ -1,0 +1,86 @@
+{
+  "enabled": true,
+  "exams": [
+    {
+      "id": "las101-final-2025",
+      "courseCode": "LAS101",
+      "courseName": "Critical Thinking, Reading, and Writing",
+      "examType": "Final",
+      "examDate": "2025-12-01T09:00:00+07:00",
+      "location": null,
+      "notes": "Closed Book"
+    },
+    {
+      "id": "css326-final-2025",
+      "courseCode": "CSS326",
+      "courseName": "Database Programming Laboratory",
+      "examType": "Final",
+      "examDate": "2025-12-02T09:00:00+07:00",
+      "location": null,
+      "notes": null
+    },
+    {
+      "id": "des352-midterm-2026",
+      "courseCode": "DES352",
+      "courseName": "Networking Laboratory",
+      "examType": "Midterm",
+      "examDate": "2026-02-18T13:00:00+07:00",
+      "location": "BKD Network Lab, SIIT Bangkadi Campus",
+      "notes": "Section 5 | Instructor: Ms. Sasirassamee Buavirat"
+    },
+    {
+      "id": "css334-midterm-2026",
+      "courseCode": "CSS334",
+      "courseName": "Computer Network and Internetworking",
+      "examType": "Midterm",
+      "examDate": "2026-02-23T09:00:00+07:00",
+      "location": null,
+      "notes": null
+    },
+    {
+      "id": "bas357-midterm-2026",
+      "courseCode": "BAS357",
+      "courseName": "Economic Decision Analysis",
+      "examType": "Midterm",
+      "examDate": "2026-02-23T15:00:00+07:00",
+      "location": null,
+      "notes": null
+    },
+    {
+      "id": "css454-midterm-2026",
+      "courseCode": "CSS454",
+      "courseName": "Computer and Communication Security",
+      "examType": "Midterm",
+      "examDate": "2026-02-24T09:00:00+07:00",
+      "location": null,
+      "notes": null
+    },
+    {
+      "id": "des329-midterm-2026",
+      "courseCode": "DES329",
+      "courseName": "System Analysis and Design",
+      "examType": "Midterm",
+      "examDate": "2026-02-25T09:00:00+07:00",
+      "location": null,
+      "notes": null
+    },
+    {
+      "id": "css451-midterm-2026",
+      "courseCode": "CSS451",
+      "courseName": "Cloud Computing",
+      "examType": "Midterm",
+      "examDate": "2026-02-25T15:00:00+07:00",
+      "location": null,
+      "notes": null
+    },
+    {
+      "id": "css323-midterm-2026",
+      "courseCode": "CSS323",
+      "courseName": "Software Engineering",
+      "examType": "Midterm",
+      "examDate": "2026-02-26T09:00:00+07:00",
+      "location": null,
+      "notes": null
+    }
+  ]
+}

@@ -1,0 +1,1270 @@
+{
+  "common": {
+    "loading": "Loading...",
+    "somethingWentWrong": "Something went wrong",
+    "tryAgain": "Try again",
+    "cancel": "Cancel",
+    "save": "Save",
+    "close": "Close",
+    "back": "Back",
+    "confirm": "Confirm",
+    "yes": "Yes",
+    "no": "No",
+    "download": "Download",
+    "edit": "Edit",
+    "delete": "Delete",
+    "free": "FREE",
+    "showMore": "Show more",
+    "showLess": "Show less"
+  },
+  "auth": {
+    "processingLogin": "Processing login...",
+    "authFailedAlert": "Authentication failed: {{error}}",
+    "noTokenAlert": "No authentication token received"
+  },
+  "errorBoundary": {
+    "message": "We're sorry, but something unexpected happened. Please try reloading the page.",
+    "reloadPage": "Reload Page"
+  },
+  "languageSwitcher": {
+    "english": "Switch to English",
+    "thai": "Switch to Thai"
+  },
+  "nav": {
+    "toggleMenu": "Toggle menu",
+    "openSearch": "Open search",
+    "clearSearch": "Clear search",
+    "institutionPicker": {
+      "ariaLabel": "Choose institution",
+      "allInstitutions": "All Institutions",
+      "requestYours": "Don't see your institution? Request it"
+    },
+    "searchPlaceholder": "Search cheat sheets...",
+    "browse": "Browse",
+    "library": "Library",
+    "resources": "Resources",
+    "settings": "Settings",
+    "support": "Support",
+    "mockExams": "Mock Exams",
+    "applyToBeSeller": "Apply to be Seller",
+    "requestFlagshipStore": "Request a Flagship Store",
+    "admin": "Admin",
+    "seller": "Seller",
+    "staff": "Staff",
+    "uploadCheatSheet": "Upload Cheat Sheet",
+    "myCheatSheets": "My Cheat Sheets",
+    "myEarnings": "Payouts",
+    "printRequests": "Print Requests",
+    "myStore": "My Store",
+    "transferCode": "Transfer Code",
+    "adminPanel": "Admin Panel",
+    "approvals": "Approvals",
+    "upcomingExams": "Upcoming Exams",
+    "flagshipStoreRequests": "Flagship Store Requests",
+    "analytics": "Analytics",
+    "mobileApp": "Mobile App",
+    "sellerSummary": "Seller Summary",
+    "giveawayManagement": "Giveaway Management",
+    "printBalance": "Thammasat Printer",
+    "cart": "Cart",
+    "logout": "Logout",
+    "profileMenu": "Profile menu",
+    "courseManagement": "Course Registry",
+    "studyTags": "Study Tags",
+    "more": "More"
+  },
+  "myLibrary": {
+    "title": "My Library",
+    "viewAll": "View all",
+    "searchMatches": "{{count}} already owned in this search"
+  },
+  "cheatSheetDetail": {
+    "notFound": "Cheat sheet not found",
+    "editCheatSheet": "Edit Cheat Sheet",
+    "ratingReviews": "{{rating}} ({{count}} reviews)",
+    "viewsCount": "{{count}} views",
+    "purchasesCount": "{{count}} purchases",
+    "printRequest": "Print Request",
+    "pickupLocation": "Pickup Location",
+    "amountLabel": "Amount:",
+    "current": "current",
+    "madeBy": "Made by",
+    "credit": {
+      "two": "{{a}} and {{b}}",
+      "many": "{{a}}, {{b}} and {{others}}",
+      "others_one": "{{count}} other",
+      "others_other": "{{count}} others"
+    },
+    "relatedVideos": "Related Videos",
+    "versionHistory": "Version History",
+    "usageNoticeTitle": "For Individual Use Only:",
+    "usageNoticeBody": "This cheat sheet is for your personal use only. Please do not share with others. Respect the hard work of the creator who made this resource available.",
+    "exclusiveContent": "Exclusive Content",
+    "reviewsHeader": "Reviews ({{count}})",
+    "yourRating": "Your Rating *",
+    "yourReview": "Your Review (Optional)",
+    "reviewPlaceholder": "Share your thoughts about this cheat sheet...",
+    "submitting": "Submitting...",
+    "submitReview": "Submit Review",
+    "alreadyReviewed": "You reviewed this cheat sheet on {{date}}. Thank you for your feedback!",
+    "editReview": "Edit",
+    "deleteReview": "Delete",
+    "deleting": "Deleting...",
+    "confirmDeleteReview": "Delete your review? This can't be undone.",
+    "purchaseRequiredToReview": "Purchase this cheat sheet to leave a review",
+    "anonymous": "Anonymous",
+    "unknownDate": "Unknown date",
+    "noReviewsYet": "No reviews yet. Be the first to review this cheat sheet!",
+    "availableToDownloadOn": "Available to download on",
+    "bkkTime": "(BKK time)",
+    "preOrderedDownloadingOn": "Pre-ordered — Downloading on {{date}}",
+    "preOrderPendingPayment": "Pre-order Pending Payment",
+    "adding": "Adding...",
+    "preOrderNow": "Pre-order Now",
+    "loginToPreOrder": "Login to Pre-order",
+    "downloading": "Downloading...",
+    "downloadPdf": "Download PDF",
+    "loginToDownload": "Login to Download",
+    "paymentPendingApproval": "Payment Pending Approval",
+    "addToCart": "Add to Cart",
+    "loginToAddToCartButton": "Login to Add to Cart",
+    "printForMe": "Print for Me",
+    "printingUnavailable": "Printing unavailable right now",
+    "previewFullDocument": "Preview Full Document",
+    "badges": {
+      "purchased": "PURCHASED",
+      "preOrder": "PRE-ORDER",
+      "preOrdered": "PRE-ORDERED",
+      "institutionRestricted": "{{institution}} STUDENTS ONLY",
+      "comingSoon": "COMING SOON",
+      "saved": "SAVED"
+    },
+    "institutionRestricted": "Only available to {{institution}} students",
+    "institutionRestrictedFallback": "a specific institution",
+    "info": {
+      "semester": "Semester",
+      "academicYear": "Academic Year",
+      "yearLevel": "Year Level",
+      "examType": "Exam Type",
+      "pages": "Pages",
+      "pagesValue": "{{count}} pages",
+      "fileSize": "File Size"
+    },
+    "social": {
+      "instagram": "Instagram: @{{handle}}",
+      "line": "Line: {{id}}",
+      "call": "Call: {{phone}}"
+    },
+    "printStatus": {
+      "awaitingPayment": "Awaiting Payment",
+      "confirmed": "Confirmed",
+      "beingPrinted": "Being Printed",
+      "readyForPickup": "Ready for Pickup!",
+      "completed": "Completed",
+      "cancelled": "Cancelled"
+    },
+    "printSteps": {
+      "awaitingPayment": "Awaiting Payment",
+      "confirmed": "Confirmed",
+      "printing": "Printing",
+      "ready": "Ready",
+      "done": "Done"
+    },
+    "print": {
+      "pageCostLine": "{{count}} pages × {{pricePerPage}} ฿/page",
+      "priceLabel": "Price:",
+      "pricePerPage": "{{price}} ฿/page",
+      "choosePaymentMethod": "Choose payment method",
+      "promptpayDescription": "Pay seller directly via QR code",
+      "tuCredit": "TU Credit",
+      "tuCreditDescription": "Use your 100 ฿/semester library allowance",
+      "privacyNoticeTitle": "Privacy Notice",
+      "privacyNoticeBody": "Your Student ID and ID card number will be shared with the seller so they can print at TU Library on your behalf. Both are encrypted in our database and will be permanently deleted once your print job is completed or cancelled.",
+      "studentId": "Student ID",
+      "idCardNumber": "ID Card Number",
+      "idCardPlaceholder": "13-digit national ID number",
+      "submitRequest": "Submit Request"
+    },
+    "qr": {
+      "openBankingApp": "Open your banking app",
+      "scanQrCode": "Scan this QR code",
+      "payExactly": "Pay exactly {{amount}} ฿"
+    },
+    "toasts": {
+      "loadFailed": "Failed to load cheat sheet",
+      "printRequestSubmitted": "Print request submitted!",
+      "printRequestFailed": "Failed to submit print request",
+      "loginToAddToCart": "Please login to add items to cart",
+      "itemAlreadyInCart": "Item already in cart",
+      "addedToCart": "Added to cart!",
+      "cannotAddToCart": "Cannot add to cart",
+      "addToCartFailed": "Failed to add to cart",
+      "qrGenerated": "Payment QR code generated!",
+      "purchaseFailed": "Purchase failed",
+      "preparingDownload": "Preparing download{{fileSizeInfo}}... Please keep this tab open.",
+      "downloadingProgress": "Downloading PDF{{fileSizeInfo}}... {{percent}}%",
+      "downloadingReceived": "Downloading PDF... {{loaded}} MB received",
+      "downloadCompleted": "Download completed successfully!",
+      "downloadFailed": "Download failed",
+      "selectRating": "Please select a rating",
+      "reviewUpdated": "Review updated!",
+      "reviewSubmitted": "Review submitted!",
+      "reviewSubmitFailed": "Failed to submit review",
+      "reviewDeleted": "Review deleted",
+      "reviewDeleteFailed": "Failed to delete review",
+      "savedFree": "Saved to your library. It unlocks {{date}}.",
+      "saveFreeFailed": "Couldn't save this cheat sheet"
+    },
+    "share": {
+      "button": "Share",
+      "copied": "Link copied!",
+      "copyFailed": "Could not copy the link — please try again"
+    },
+    "getFreeOnRelease": "Save to my library",
+    "loginToSaveFree": "Log in to save it",
+    "savedUnlocksOn": "Saved ✓ · Unlocks {{date}}",
+    "preview3d": {
+      "hint": "Drag to rotate · Tap to flip"
+    }
+  },
+  "cart": {
+    "loadingCart": "Loading cart...",
+    "emptyState": {
+      "title": "Your cart is empty",
+      "body": "Browse our cheat sheets and add some to your cart!",
+      "openLibrary": "Open my library"
+    },
+    "title": "Shopping Cart",
+    "orderSummary": "Order Summary",
+    "subtotal_one": "Subtotal ({{count}} item)",
+    "subtotal_other": "Subtotal ({{count}} items)",
+    "bundleDiscountAvailableTitle": "Bundle Discount Available!",
+    "bundleDiscountAvailableBody": "Add one more cheat sheet to save up to {{percent}}% on your purchase",
+    "bundleDiscount": "Bundle Discount ({{percent}}%)",
+    "youAreSaving": "You're saving {{amount}} ฿!",
+    "discountCodePlaceholder": "Discount code",
+    "checking": "Checking...",
+    "apply": "Apply",
+    "codeAppliedSaving": "Code {{code}} applied — saving {{amount}} ฿",
+    "codeAppliedNoBenefit": "Code {{code}} applied (not better than your bundle discount)",
+    "remove": "Remove",
+    "total": "Total",
+    "processing": "Processing...",
+    "proceedToCheckout": "Proceed to Checkout",
+    "bundleDiscountAutoApplied": "Bundle discount applied automatically",
+    "redeemed": {
+      "title": "Order Redeemed!",
+      "body": "Your discount code fully covered this order — no payment needed.",
+      "goToMyPurchases": "Go to My Purchases"
+    },
+    "paymentConfirmed": {
+      "title": "Payment Confirmed!",
+      "redirecting": "Taking you to your purchases…"
+    },
+    "scanToPay": {
+      "title": "Scan to Pay",
+      "amount": "Amount: {{amount}} ฿",
+      "instructions": "Scan this QR code with your banking app to complete the payment. Your order will be processed once payment is confirmed.",
+      "goToMyPurchases": "Go to My Purchases",
+      "waiting": "Waiting for your payment…",
+      "payLater": "Pay later from My Purchases",
+      "close": "Close",
+      "qrAlt": "PromptPay QR code"
+    },
+    "toasts": {
+      "loadFailed": "Failed to load cart",
+      "itemRemoved": "Item removed from cart",
+      "removeFailed": "Failed to remove item",
+      "bundleBiggerInfo": "Your existing bundle discount is bigger, so this code won't change your total.",
+      "applyCodeFailed": "Failed to apply discount code",
+      "fullyRedeemed": "Order fully redeemed with your discount code — no payment needed!",
+      "orderCreated": "Order created! Generating payment QR code...",
+      "alreadyOwn": "You already own one or more items in your cart",
+      "checkoutFailed": "Checkout failed",
+      "removedItem": "Removed {{title}}",
+      "undoFailed": "Couldn't add it back. Please try again."
+    },
+    "itemCount_one": "{{count}} item",
+    "itemCount_other": "{{count}} items",
+    "removeItem": "Remove {{title}}",
+    "undo": "Undo",
+    "preparing": {
+      "title": "Getting your QR ready",
+      "order": "Creating your order…",
+      "qr": "Preparing your PromptPay QR…"
+    },
+    "receipt": {
+      "more_one": "…and {{count}} more sheet",
+      "more_other": "…and {{count}} more sheets",
+      "discount": "Discount",
+      "paid": "PAID",
+      "hint": "Open any Thai banking app, scan, and pay exactly {{amount}}.",
+      "expired": {
+        "title": "QR expired",
+        "stamp": "EXPIRED",
+        "status": "Nothing was charged",
+        "body": "This QR timed out before it was paid, so the order was closed."
+      },
+      "rejected": {
+        "title": "Order cancelled",
+        "stamp": "CANCELLED",
+        "status": "This order was cancelled",
+        "body": "We couldn't confirm this payment. If money left your account, contact us and we'll sort it out."
+      },
+      "buyAgain": "Get a new QR",
+      "backToCart": "Back to cart",
+      "close": "Close",
+      "cartRestored": "Your sheets are back in your cart."
+    }
+  },
+  "transferCode": {
+    "pageTitle": "Transfer Code",
+    "pageSubtitle": "Enter the 6-digit code from My Library to download that PDF on this device. No login needed.",
+    "inputLabel": "6-Digit Code",
+    "checkCode": "Check Code",
+    "checking": "Checking...",
+    "invalidOrExpired": "Invalid or expired code",
+    "downloadingFor": "Downloading for {{name}}",
+    "downloadPdf": "Download PDF",
+    "downloading": "Downloading...",
+    "downloadCompleted": "Download completed successfully!",
+    "downloadFailed": "Download failed. The code may have expired. Try entering it again.",
+    "enterAnotherCode": "Enter a Different Code"
+  },
+  "myPurchases": {
+    "title": "My Library",
+    "subtitle": "All your purchased cheat sheets in one place",
+    "searchPlaceholder": "Search by title or course code...",
+    "resultCount_one": "{{count}} result for \"{{query}}\"",
+    "resultCount_other": "{{count}} results for \"{{query}}\"",
+    "usageNoticeTitle": "For Individual Use Only:",
+    "usageNoticeBody": "Your purchased cheat sheets are for your personal use only. Please do not share with others. Respect the hard work of the creators who made these resources available.",
+    "updateBadgeTitle": "The seller has updated this file since your last download",
+    "updateBadgeLabel": "Updated",
+    "gift": "Gift",
+    "free": "Free",
+    "downloadCount_one": "{{count}} download",
+    "downloadCount_other": "{{count}} downloads",
+    "availableOn": "Available on {{date}}",
+    "preOrdered": "Pre-ordered",
+    "downloading": "Downloading...",
+    "newVersion": "New Version",
+    "showQrCode": "Show QR Code",
+    "details": "Details",
+    "status": {
+      "paid": "paid",
+      "pending": "pending",
+      "failed": "failed",
+      "refunded": "refunded",
+      "revoked": "revoked"
+    },
+    "noResults": {
+      "title": "No results",
+      "body": "No cheat sheets match \"{{query}}\"."
+    },
+    "emptyState": {
+      "title": "No Purchases Yet",
+      "body": "You haven't purchased any cheat sheets yet."
+    },
+    "modal": {
+      "title": "Scan to Pay",
+      "amount": "Amount: {{amount}} ฿",
+      "instructions": "Scan this QR code with your banking app to complete the payment. Your purchase will be processed once payment is confirmed by admin."
+    },
+    "transferCode": {
+      "getCode": "Get Transfer Code",
+      "generateFailed": "Failed to generate transfer code",
+      "modalTitle": "Your Transfer Code",
+      "modalInstructions": "On another device, open \"Transfer Code\" in the menu and enter this code to download this PDF there. No login needed.",
+      "expiresIn": "Expires in {{time}}",
+      "expired": "This code has expired",
+      "regenerate": "Generate New Code",
+      "cooldownShort": "On cooldown",
+      "cooldownUntil": "Available again at {{time}}",
+      "button": "Transfer code",
+      "hint": "Get a one-time code to download this PDF on another device without logging in"
+    },
+    "toasts": {
+      "loadFailed": "Failed to load purchases",
+      "preparingDownload": "Preparing your download... Please keep this tab open.",
+      "downloadingProgress": "Downloading PDF ({{loaded}} MB / {{total}} MB)... {{percent}}%",
+      "downloadingReceived": "Downloading PDF... {{loaded}} MB received",
+      "downloadCompleted": "Download completed successfully!",
+      "downloadFailed": "Download failed",
+      "qrFetchFailed": "Failed to retrieve QR code",
+      "nothingToPay": "Nothing left to pay on this order."
+    },
+    "updatedTo": "New v{{version}}",
+    "payWithQr": "Pay with QR",
+    "sections": {
+      "updates": "Updates available",
+      "updatesHint": "The seller updated these since your last download. Download again to get the latest version.",
+      "pending": "Waiting for payment",
+      "pendingHint": "Scan the QR code to finish paying. These unlock once the payment is confirmed.",
+      "owned": "Your cheat sheets",
+      "inactive": "Unsuccessful orders",
+      "inactiveHint": "Failed, refunded or revoked orders. These don't give access to the file."
+    },
+    "whatsNewTitle": "What's new in v{{version}}",
+    "unlocksOn": "Unlocks {{date}}",
+    "bundle": {
+      "title_one": "Unpaid order · {{count}} sheet",
+      "title_other": "Unpaid order · {{count}} sheets",
+      "saving": "Bundle price · you save {{amount}}",
+      "pay": "Pay {{amount}} with QR",
+      "payLater": "I'll pay later",
+      "savingCode": "Code {{code}} · you save {{amount}}",
+      "savingGeneric": "You save {{amount}}"
+    },
+    "preparingFile": "Preparing…",
+    "downloadingPercent": "Downloading {{percent}}%"
+  },
+  "settings": {
+    "title": "Settings",
+    "subtitle": "Manage your account preferences and information",
+    "profileInformation": "Profile Information",
+    "userFallback": "User",
+    "name": "Name",
+    "nameHelp": "Your name is synced from your Google account",
+    "email": "Email",
+    "emailHelp": "Your email address",
+    "academicInformation": "Academic Information",
+    "yearLevel": "Year Level",
+    "selectYear": "Select your year",
+    "yearLevelHelp": "This helps us show you relevant cheat sheets and upcoming exams for your year level",
+    "saving": "Saving...",
+    "saveChanges": "Save Changes",
+    "contactSocial": "Contact & Social",
+    "contactSocialHelp": "Shown to buyers on your cheat sheet pages. All fields are optional.",
+    "instagram": "Instagram",
+    "instagramHelp": "Without the @ symbol",
+    "lineId": "Line ID",
+    "phoneNumber": "Phone Number",
+    "saveSocialLinks": "Save Social Links",
+    "adminSettings": "Admin Settings",
+    "stripePayments": "Stripe Payments",
+    "stripePaymentsDescription": "Take PromptPay through Stripe so buyers get access the moment they pay, at any hour, without anyone approving it.",
+    "stripeOnTitle": "Stripe is on.",
+    "stripeOnDescription": "Buyers scan a PromptPay QR issued by Stripe, and access is granted automatically once Stripe confirms the payment — nothing waits on you. Money lands in your Stripe balance rather than your PromptPay account, minus Stripe's fee. Orders under ฿20 fall below Stripe's minimum and still need approving by hand.",
+    "stripeOffTitle": "Stripe is off.",
+    "stripeOffDescription": "Buyers pay your PromptPay number directly, which nothing can confirm — so every order waits for you or a staff member to approve it from the dashboard or Telegram. A purchase made overnight sits unusable until someone is awake.",
+    "stripeNotConfigured": "The server also has no Stripe key configured yet.",
+    "toasts": {
+      "loadAdminSettingsFailed": "Failed to load admin settings",
+      "stripeSavedNoKey": "Saved, but the server has no Stripe key — payments stay on manual approval",
+      "stripeEnabled": "Stripe payments enabled",
+      "stripeDisabled": "Stripe payments disabled",
+      "updateSettingFailed": "Failed to update setting",
+      "socialUpdated": "Social links updated",
+      "socialUpdateFailed": "Failed to update social links",
+      "selectYearLevelRequired": "Please select a year level",
+      "yearLevelUpdated": "Year level updated successfully",
+      "yearLevelUpdateFailed": "Failed to update year level"
+    },
+    "dangerZone": {
+      "title": "Danger Zone",
+      "warningTitle": "Deactivating your account is a permanent action",
+      "warningBody": "You will be logged out immediately and unable to log in again. Your purchase history and transaction records will be preserved. Contact support at any time to reactivate your account.",
+      "button": "Deactivate My Account",
+      "deactivating": "Deactivating...",
+      "confirm": "Are you sure you want to deactivate your account?\n\nDeactivating your account will:\n• Log you out immediately\n• Prevent you from logging in again\n• Hide your profile from other users\n\nYour purchase history and transaction records will be preserved.\n\nContact support to reactivate your account.",
+      "confirmFinal": "This is your final warning. Are you absolutely sure you want to deactivate your account?",
+      "success": "Account deactivated. Your data has been preserved. Redirecting...",
+      "failed": "Failed to deactivate account"
+    },
+    "studyProfile": "Programs",
+    "studyProfileHelp": "Exams and cheat sheets for these come first. Everything else is still shown after them.",
+    "saveStudyProfile": "Save Programs"
+  },
+  "institutionBanner": {
+    "label": "Institution you're viewing",
+    "viewing": "You're viewing {{name}}",
+    "backTo": "Back to {{name}}",
+    "viewingShort": "Viewing {{name}}",
+    "sheetFrom": "This sheet is from {{name}}",
+    "sheetFromShort": "From {{name}}",
+    "browseHome": "Browse {{name}}",
+    "dismiss": "Dismiss"
+  },
+  "upcomingExams": {
+    "upcomingExamType": "Upcoming {{examType}}",
+    "previousExam": "Previous exam",
+    "nextExam": "Next exam",
+    "examCounter": "Exam {{current}} of {{total}}",
+    "timeLeft": "{{time}} left",
+    "location": "Exam location",
+    "noSheetsYet": "No cheat sheets yet for {{courseCode}} {{examType}}. Got one?",
+    "uploadOne": "Upload one"
+  },
+  "cheatSheetCard": {
+    "preOrder": "Pre-order",
+    "new": "New",
+    "sponsored": "Sponsored",
+    "institutionRestricted": "Institution Only",
+    "uploader": "Uploader",
+    "printAvailable": "Print available",
+    "printingClosed": "Printing closed",
+    "releases": "Releases {{date}}",
+    "comingSoon": "Coming soon"
+  },
+  "home": {
+    "errors": {
+      "invalidDomain": "Access Denied: Your email domain is not associated with a registered institution.",
+      "authFailed": "Authentication failed. Please try again.",
+      "authError": "An error occurred during authentication. Please try again.",
+      "loginError": "Login error. Please try again.",
+      "authErrorGeneric": "Authentication error. Please try again.",
+      "requestTimeout": "Request timed out. Please check your connection.",
+      "connectionError": "Unable to connect to server. Please check your internet connection."
+    },
+    "yearAll": "All",
+    "year1": "Year 1",
+    "year2": "Year 2",
+    "year3": "Year 3",
+    "year4": "Year 4",
+    "year1Short": "1",
+    "year2Short": "2",
+    "year3Short": "3",
+    "year4Short": "4",
+    "featuredTitle": "Featured",
+    "sortBy": "Sort by",
+    "sortRelevance": "Relevance",
+    "sortNewest": "Newest",
+    "sortPopular": "Most Popular",
+    "sortPriceLow": "Price: Low to High",
+    "sortPriceHigh": "Price: High to Low",
+    "sortRating": "Highest Rated",
+    "availableCheatSheets": "Available Cheat Sheets",
+    "noCheatSheetsFound": "No cheat sheets found",
+    "loadingMore": "Loading…",
+    "loadMore": "Load more",
+    "empty": {
+      "searchTitle": "Nothing matches \"{{query}}\"",
+      "searchBody": "Try a course code like CSS224, a shorter keyword, or check the spelling.",
+      "clearSearch": "Clear search",
+      "allYears": "Show all years",
+      "yearTitle": "No {{year}} cheat sheets yet",
+      "yearBody": "Nobody has shared one for this year level yet. Other years might still have what you need.",
+      "institutionTitle": "No cheat sheets at {{name}} yet",
+      "institutionBody": "Be the first to share one. Sellers earn from every purchase, and your classmates will thank you.",
+      "upload": "Upload a cheat sheet",
+      "becomeSeller": "Become a seller",
+      "allInstitutions": "Browse all institutions",
+      "allOwnedTitle": "You already have everything here",
+      "allOwnedBody_one": "The only cheat sheet that matches is already in your library.",
+      "allOwnedBody_other": "All {{count}} cheat sheets that match are already in your library.",
+      "openLibrary": "Open my library"
+    }
+  },
+  "footer": {
+    "tagline": "A marketplace for high-quality cheat sheets, made by students, for students.",
+    "quickLinks": "Quick Links",
+    "browseCheatSheets": "Browse Cheat Sheets",
+    "myLibrary": "My Library",
+    "support": "Support",
+    "becomeSeller": "Become a Seller",
+    "legal": "Legal",
+    "privacyPolicy": "Privacy Policy",
+    "termsOfService": "Terms of Service",
+    "copyright": "© {{year}} Peanut Cheat Sheet Marketplace. All rights reserved.",
+    "madeWith": "Made with ❤️ from Peanut"
+  },
+  "searchPalette": {
+    "title": "Search Peanut Cheat Sheets",
+    "closeAriaLabel": "Close search",
+    "inputPlaceholder": "Search by title, course code, or description...",
+    "hintPrefix": "Press",
+    "hintSearch": "to search",
+    "hintOr": "or",
+    "hintClose": "to close",
+    "searchButton": "Search"
+  },
+  "supportWatch": {
+    "replyTitle": "Support replied to ticket #{{id}}",
+    "replyFallback": "You have a new message from the support team.",
+    "resolvedTitle": "Ticket #{{id}} marked as resolved",
+    "resolvedBody": "The support team marked this chat as resolved, so new messages may no longer be monitored. Submit a new ticket if you still need help.",
+    "openChat": "Open chat",
+    "viewTicket": "View ticket",
+    "later": "Later",
+    "ok": "OK"
+  },
+  "applySeller": {
+    "title": "Apply to Become a Seller",
+    "subtitle": "Share your knowledge and earn by selling cheat sheets on our platform. Once approved, you'll be able to upload and sell your materials.",
+    "benefitsTitle": "Why sell with us?",
+    "benefits": {
+      "protected": {
+        "title": "Your work stays protected",
+        "description": "Every PDF is automatically watermarked with the buyer's info, so your material can't be shared or resold behind your back."
+      },
+      "distribution": {
+        "title": "We handle the distribution",
+        "description": "Upload once — hosting, delivery, and secure downloads are all taken care of. No need to send files or manage buyers yourself."
+      },
+      "extras": {
+        "title": "Add exclusive extras",
+        "description": "Attach YouTube walkthroughs or bonus content that only unlocks for people who actually purchase your cheat sheet."
+      },
+      "noContracts": {
+        "title": "No contracts, no obligations",
+        "description": "List what you want, price it your way, and sell entirely on your own terms — it's completely up to you."
+      },
+      "freeFeatures": {
+        "title": "New features, always free",
+        "description": "As we keep building the platform, you'll get every new seller feature at no extra cost, for years to come."
+      }
+    },
+    "fields": {
+      "fullName": "Full Name",
+      "fullNameHelp": "This is your name from your Google account",
+      "bank": "Bank",
+      "bankName": "Bank Name",
+      "bankPlaceholder": "Select your bank",
+      "bankHelp": "Select the bank where you want to receive payments",
+      "accountNumber": "Bank Account Number",
+      "accountNumberHelp": "Enter your bank account number (10-15 digits). This will be encrypted.",
+      "accountName": "Account Holder Name",
+      "accountNamePlaceholder": "Enter name as shown on bank account",
+      "accountNameHelp": "Name registered with your bank account",
+      "phone": "Phone Number",
+      "phoneHelp": "Optional - for admin to contact you if needed",
+      "reason": "Why do you want to become a seller?",
+      "reasonPlaceholder": "Tell us why you want to sell cheat sheets (optional)",
+      "reasonHelp": "Optional - helps us understand your motivation"
+    },
+    "banks": {
+      "bangkok": "Bangkok Bank",
+      "kbank": "Kasikornbank (K-Bank)",
+      "scb": "Siam Commercial Bank (SCB)",
+      "krungthai": "Krung Thai Bank",
+      "krungsri": "Bank of Ayudhya (Krungsri)",
+      "tmb": "TMB Bank",
+      "gsb": "Government Savings Bank",
+      "cimb": "CIMB Thai Bank",
+      "uob": "United Overseas Bank (UOB)",
+      "thanachart": "Thanachart Bank",
+      "standardChartered": "Standard Chartered Bank",
+      "icbc": "ICBC (Thai)",
+      "other": "Other"
+    },
+    "fee": {
+      "title": "Platform fee: 10% per sale.",
+      "body": "You receive 90% of the listed price. For example, a 100 ฿ cheat sheet earns you 90 ฿ after the fee."
+    },
+    "submit": "Submit Application",
+    "submitting": "Submitting...",
+    "terms": "By submitting this application, you agree to our terms and conditions for sellers. Your bank account information will be securely encrypted.",
+    "status": {
+      "title": "Seller Application Status",
+      "subtitle": "Your application to become a seller",
+      "reason": "Reason",
+      "submittedAt": "Submitted At",
+      "reviewedAt": "Reviewed At",
+      "adminNotes": "Admin Notes",
+      "pendingNote": "Your application is being reviewed. Please wait for admin approval.",
+      "rejectedNote": "Your application was rejected. You can submit a new application if you address the concerns above.",
+      "states": {
+        "pending": "Pending",
+        "approved": "Approved",
+        "rejected": "Rejected"
+      }
+    },
+    "toasts": {
+      "alreadySeller": "You are already a seller!",
+      "requiredFields": "Please fill in all required fields",
+      "invalidAccount": "Please enter a valid bank account number (10-15 digits)",
+      "submitted": "Application submitted successfully! We will review it soon.",
+      "submitFailed": "Failed to submit application"
+    }
+  },
+  "cheatSheetForm": {
+    "remove": "Remove",
+    "beta": "Beta",
+    "comingSoon": "Coming soon",
+    "file": {
+      "invalidType": "Please select a valid file type ({{accept}})",
+      "tooLarge": "File size must be less than {{size}}MB",
+      "current": "Current: {{name}}",
+      "dropzone": "Click to choose a file, or drag and drop",
+      "previewAlt": "Preview"
+    },
+    "collaborators": {
+      "label": "Collaborators",
+      "invalidEmail": "Please enter a valid email address",
+      "max": "Maximum {{max}} collaborators per cheat sheet.",
+      "duplicate": "This email has already been added",
+      "addFailed": "Failed to add collaborator",
+      "removeFailed": "Failed to remove collaborator",
+      "pending": "Pending — hasn't signed in yet",
+      "addedAfterCreate": "Added after creating",
+      "placeholder": "Add by email…",
+      "adding": "Adding…",
+      "add": "+ Add",
+      "help": "Credits other people who helped make this cheat sheet — they can edit it too, but never see its earnings. Must be a registered institution email. If they haven't signed in yet, they're added as pending and linked automatically once they do. Max {{max}}."
+    },
+    "supplementary": {
+      "label": "Supplementary Files (Optional)",
+      "uploadFailed": "Failed to upload {{name}}",
+      "max": "Maximum {{max}} supplementary files per cheat sheet.",
+      "removeFailed": "Failed to remove file",
+      "pendingMeta": "{{size}} MB — will upload after creating",
+      "add": "+ Add File",
+      "help": "Any file type. Only visible to students who bought this cheat sheet (or, for free cheat sheets, anyone entitled to download it). Max {{max}} files."
+    },
+    "youtube": {
+      "label": "YouTube Video Links (Optional)",
+      "moveUp": "Move up",
+      "moveDown": "Move down",
+      "placeholder": "https://www.youtube.com/watch?v=... or https://youtu.be/...",
+      "add": "+ Add Another Link",
+      "help": "Add YouTube video links related to this cheat sheet (e.g., lecture recordings, explanations). Supports both youtube.com and youtu.be formats."
+    },
+    "preview3d": {
+      "label": "3D Preview (Optional)",
+      "help": "Add photos or scans of the printed sheet's front and back. Buyers see them as a sheet they can turn around on your cheat sheet page. Crop tightly to the paper edges; the front sets the shape.",
+      "front": "Front",
+      "frontHelp": "Max 10MB. JPG, PNG or WebP.",
+      "back": "Back",
+      "backHelp": "Optional. Left blank, the back shows as plain paper.",
+      "remove": "Remove 3D preview",
+      "removedNote": "The 3D preview will be removed when you save."
+    },
+    "editor": {
+      "label": "Description",
+      "placeholder": "Describe what's included in this cheat sheet... (Markdown supported)",
+      "bold": "Bold",
+      "italic": "Italic",
+      "strikethrough": "Strikethrough",
+      "inlineCode": "Inline Code",
+      "heading": "Heading {{level}}",
+      "blockquote": "Blockquote",
+      "divider": "Horizontal Divider",
+      "codeBlock": "Code Block",
+      "bulletList": "Bullet List",
+      "numberedList": "Numbered List",
+      "taskList": "Task List",
+      "list": "List",
+      "task": "Task",
+      "link": "Link",
+      "latexMath": "LaTeX Math",
+      "math": "Math"
+    },
+    "math": {
+      "title": "LaTeX Math Syntax",
+      "intro": "You can include mathematical equations in your description using LaTeX syntax.",
+      "inline": "Inline Math",
+      "inlineHow": "Use single dollar signs for inline equations:",
+      "block": "Block Math",
+      "blockHow": "Use double dollar signs for display equations:",
+      "syntax": "Syntax:",
+      "result": "Result:",
+      "insertInline": "Insert Inline Math",
+      "insertBlock": "Insert Block Math",
+      "examples": "Common Examples",
+      "quadratic": "Quadratic Formula:",
+      "summation": "Summation:",
+      "matrix": "Matrix:",
+      "insertExample": "Insert This Example"
+    }
+  },
+  "courseCode": {
+    "placeholder": "e.g. CS101",
+    "unknown": "We don't recognize \"{{code}}\" yet.",
+    "registrarName": "{{name}} registrar",
+    "theRegistrar": "the registrar",
+    "registrarSays": "{{registrar}} says:",
+    "useName": "Use this name",
+    "notThis": "Not this",
+    "namePlaceholder": "Course name",
+    "confirm": "Confirm",
+    "checking": "Checking...",
+    "check": "Check {{registrar}}",
+    "enterManually": "Enter name manually",
+    "enterName": "Enter course name",
+    "notFound": "{{registrar}} has no record of this course this term. Try entering it manually.",
+    "error": "Couldn't reach {{registrar}} right now. Try again, or enter the name manually."
+  },
+  "upload": {
+    "pageTitle": "Upload a cheat sheet",
+    "title": "Upload New Cheat Sheet",
+    "subtitle": "Add a new cheat sheet to the marketplace",
+    "stepsLabel": "Upload steps",
+    "steps": {
+      "who": "Who made it",
+      "basics": "Basics",
+      "description": "Description",
+      "files": "Files",
+      "options": "Options"
+    },
+    "who": {
+      "title": "Who made this?",
+      "description": "Credit everyone who worked on it.",
+      "solo": "Just me",
+      "soloText": "You made it on your own.",
+      "group": "Me and friends",
+      "groupText": "They can edit it too, but never see its earnings."
+    },
+    "basics": {
+      "description": "Title, course, and price.",
+      "title": "Title",
+      "titlePlaceholder": "e.g., AI Midterm Cheat Sheet (SO GOOD!)",
+      "courseCode": "Course Code",
+      "coursePlaceholder": "e.g., CS101",
+      "price": "Price (THB)",
+      "pricePlaceholder": "e.g., 50",
+      "priceHelp": "0 for free, or at least ฿{{min}} if paid.",
+      "semester": "Semester",
+      "semesterPlaceholder": "Select semester (optional)",
+      "summer": "3 (Summer)",
+      "academicYear": "Academic Year",
+      "academicYearPlaceholder": "Select year (optional)",
+      "yearLevel": "Year Level",
+      "yearLevelHelp": "What year of study is this cheat sheet for? Tap again to clear.",
+      "examType": "Exam Type",
+      "examTypeHelp": "Select every exam this cheat sheet covers, e.g. both Midterm and Final."
+    },
+    "yearN": "Year {{n}}",
+    "examTypes": {
+      "midterm": "Midterm",
+      "final": "Final",
+      "quiz": "Quiz"
+    },
+    "descriptionStep": {
+      "description": "What it covers and why it helps. Markdown and LaTeX math are supported."
+    },
+    "filesStep": {
+      "description": "The PDF buyers download, plus what they see before buying.",
+      "pdf": "PDF File",
+      "pdfHelp": "Maximum file size: 200MB. Only PDF files are allowed.",
+      "previewImage": "Preview Image (Optional)",
+      "previewImageHelp": "Shown to customers before they buy. A screenshot of the first page works well. Max 5MB. JPG, PNG, or WebP."
+    },
+    "optionsStep": {
+      "description": "All optional. You can change these later from Edit.",
+      "exclusive": "Exclusive Content (Optional)",
+      "exclusivePlaceholder": "Add bonus tips or any content only visible to buyers after purchase...",
+      "exclusiveHelp": "This text is hidden from everyone until they purchase. Use it for bonus tips or any post-purchase content.",
+      "fullPreview": "Full Preview",
+      "fullPreviewOff": "Full preview disabled",
+      "fullPreviewHelp": "Will let buyers browse every page before purchasing, as watermarked images (never the original PDF).",
+      "institutionOnly": "Institution-Only Downloads",
+      "restricted": "Restricted to my institution",
+      "everyone": "Available to everyone",
+      "restrictedHelp": "Anyone can still see and preview this listing, but only students of your own institution will be able to buy it, download it, or request a print.",
+      "noInstitutionHelp": "Your account isn't associated with an institution, so this can't be restricted.",
+      "releaseDate": "Pre-order Release Date (Optional)",
+      "releaseDateHelp": "If set, students can pay now but can only download after this date and time. Leave blank to make the file available immediately after purchase."
+    },
+    "errors": {
+      "priceEmpty": "Enter a price, or 0 to make it free.",
+      "priceNaN": "Enter a number.",
+      "priceNegative": "Price can't be negative.",
+      "priceMin": "Paid sheets must be at least ฿{{min}}. Use 0 to make it free.",
+      "title": "Give your cheat sheet a title.",
+      "courseEmpty": "Enter the course code.",
+      "courseUnconfirmed": "Pick the course from the suggestions to confirm it.",
+      "description": "Describe what the cheat sheet covers.",
+      "file": "Choose the PDF to upload."
+    },
+    "toasts": {
+      "requiredFields": "Please fill in all required fields",
+      "confirmCourse": "Please confirm the course code before uploading",
+      "selectPdf": "Please select a PDF file to upload",
+      "priceMin": "Price must be free or at least ฿{{min}}",
+      "uploading": "Uploading cheat sheet... {{percent}}%",
+      "saving": "Saving...",
+      "uploadingAttachment": "Uploading attachment {{current}} of {{total}}...",
+      "attachmentFailed": "Failed to upload {{name}} — you can add it later from Edit",
+      "addingCollaborator": "Adding collaborator {{current}} of {{total}}...",
+      "collaboratorFailed": "Failed to add {{email}} — you can add them later from Edit",
+      "uploaded": "Cheat sheet uploaded successfully!",
+      "uploadFailed": "Failed to upload cheat sheet"
+    },
+    "confirmCancel": "Are you sure you want to cancel? All entered data will be lost.",
+    "cancel": "Cancel",
+    "back": "Back",
+    "next": "Next",
+    "submit": "Upload Cheat Sheet",
+    "submitting": "Uploading..."
+  },
+  "edit": {
+    "pageTitle": "Edit cheat sheet",
+    "title": "Edit Cheat Sheet",
+    "viewSheet": "View sheet",
+    "tabsLabel": "Edit sections",
+    "tabs": {
+      "details": "Details",
+      "people": "People",
+      "print": "Print service"
+    },
+    "hasChanges": "Unsaved changes",
+    "hasErrors": "Needs attention",
+    "unsaved": "Unsaved changes",
+    "allSaved": "All changes saved",
+    "discard": "Discard",
+    "save": "Save changes",
+    "saving": "Saving...",
+    "confirmDiscard": "Discard your unsaved changes?",
+    "confirmLeave": "You have unsaved changes. Leave without saving?",
+    "files": {
+      "pdf": "Replace PDF (Optional)",
+      "pdfHelp": "Upload a new version to replace the current file. The old version is archived and buyers keep access to the latest one. Max 200MB.",
+      "whatsNew": "What's new in this version (Optional)",
+      "whatsNewPlaceholder": "e.g. Added chapter 5 formulas\nFixed a typo in the derivatives table",
+      "whatsNewHelp": "Buyers see this in the version history and on their My Library card for this update.",
+      "attachmentsInstant": "Supplementary files are added and removed right away, without Save."
+    },
+    "options": {
+      "fullPreviewOn": "Full preview enabled",
+      "fullPreviewLegacyHelp": "Buyers can browse every page before purchasing, as watermarked images. Full preview is being reworked: once turned off, it can't be turned back on for now.",
+      "noInstitutionHelp": "This cheat sheet isn't associated with an institution, so it can't be restricted.",
+      "releasePassed": "This release date has already passed and cannot be changed.",
+      "releaseHelp": "Students can pay now but download only after this date. Clear the date to allow immediate download."
+    },
+    "people": {
+      "instant": "Collaborators are added and removed right away, without Save."
+    },
+    "print": {
+      "title": "Print for Me",
+      "description": "Let buyers of this cheat sheet request a physical print. They pick it up at your location and pay via PromptPay or their TU Library printing credit.",
+      "enabled": "Print service enabled",
+      "disabled": "Print service disabled",
+      "pricePerPage": "Price per Page (THB)",
+      "pricePerPageHelp": "Default: 2.75 ฿ per page (5.50 ฿ per sheet)",
+      "promptpay": "Your PromptPay Number",
+      "promptpayHelp": "Buyers using PromptPay will pay this number directly",
+      "pickup": "Pickup Location",
+      "pickupPlaceholder": "e.g. TU Library, floor 2, counter B (Mon–Fri 9am–5pm)",
+      "required": "Fill in the price, PromptPay number, and pickup location, or turn the print service off.",
+      "accepting": "Accepting new requests",
+      "notAccepting": "Not accepting new requests (e.g. outside library hours)",
+      "acceptingHelp": "Turn this off when the library is closed. Existing requests are not affected."
+    },
+    "toasts": {
+      "loadFailed": "Failed to load cheat sheet",
+      "updating": "Updating cheat sheet... {{percent}}%",
+      "saved": "Changes saved",
+      "saveFailed": "Failed to save changes",
+      "fixErrors": "Some fields need attention before saving"
+    }
+  },
+  "sellerSheets": {
+    "pageTitle": "My cheat sheets",
+    "title": "My Cheat Sheets",
+    "subtitle": "How your sheets are doing, and everything to manage them.",
+    "upload": "Upload new",
+    "range": {
+      "aria": "Time range",
+      "short": "{{days}}D",
+      "label": "Last {{days}} days"
+    },
+    "kpi": {
+      "sales": "Sales",
+      "earnings": "Revenue",
+      "views": "Views",
+      "conversion": "Conversion",
+      "vsPrevious": "vs previous {{days}} days",
+      "new": "New",
+      "revenueNote": "Before commission",
+      "seePayouts": "Payouts"
+    },
+    "metrics": {
+      "sales": "Sales",
+      "earnings": "Revenue",
+      "views": "Views"
+    },
+    "chart": {
+      "title": "Performance by cheat sheet",
+      "metricLabel": "Metric",
+      "viewLabel": "View",
+      "chart": "Chart",
+      "table": "Table",
+      "sheet": "Cheat sheet",
+      "heading": {
+        "sales": "Sales by cheat sheet · {{range}}",
+        "earnings": "Revenue by cheat sheet · {{range}}",
+        "views": "Views by cheat sheet · {{range}}"
+      },
+      "empty": {
+        "sales": "No sales in the {{range}} yet.",
+        "earnings": "No revenue in the {{range}} yet.",
+        "views": "No views in the {{range}} yet."
+      },
+      "others_one": "Others ({{count}} sheet)",
+      "others_other": "Others ({{count}} sheets)"
+    },
+    "attention": {
+      "rejected_one": "{{count}} sheet was rejected: see why",
+      "rejected_other": "{{count}} sheets were rejected: see why",
+      "pending_one": "{{count}} waiting for review",
+      "pending_other": "{{count}} waiting for review"
+    },
+    "filters": {
+      "aria": "Filter by status",
+      "all": "All",
+      "active": "Active",
+      "hidden": "Hidden",
+      "pending": "Pending",
+      "rejected": "Rejected",
+      "sponsored": "Sponsored"
+    },
+    "search": "Search title or course",
+    "sort": {
+      "aria": "Sort",
+      "newest": "Newest",
+      "selling": "Best selling (30D)",
+      "viewed": "Most viewed"
+    },
+    "status": {
+      "active": "Active",
+      "preorder": "Pre-order · {{date}}",
+      "hidden": "Hidden",
+      "pending": "Pending review",
+      "rejected": "Rejected",
+      "sponsored": "Sponsored"
+    },
+    "stats": {
+      "rating": "Rating",
+      "views": "Views",
+      "sold": "Sold"
+    },
+    "spark": {
+      "total_one": "{{count}} sold",
+      "total_other": "{{count}} sold",
+      "up": "▲ last 30 days",
+      "down": "▼ last 30 days",
+      "flat": "steady"
+    },
+    "menu": {
+      "aria": "Actions for {{title}}",
+      "edit": "Edit",
+      "view": "View page",
+      "hide": "Hide from store",
+      "show": "Show in store",
+      "sponsor": "Sponsor…",
+      "unsponsor": "Stop sponsoring…"
+    },
+    "empty": {
+      "none": "You haven't uploaded any cheat sheets yet.",
+      "filtered": "No cheat sheets match these filters."
+    },
+    "sponsor": {
+      "title": "Sponsor “{{title}}”?",
+      "pinned": "Shown first in browse and search",
+      "pinnedHelp": "Ahead of unsponsored sheets, for as long as sponsorship is on.",
+      "badge": "Marked with a “Sponsored” badge",
+      "fee": "{{percent}}% sponsorship fee on each sale",
+      "feeExample": "That's {{fee}} of each {{price}} sale.",
+      "feeFree": "This sheet is free, so there's nothing to deduct.",
+      "anytime": "You can stop sponsoring at any time; the fee only applies to sales made while it's on.",
+      "cancel": "Cancel",
+      "confirm": "Sponsor this sheet",
+      "offTitle": "Stop sponsoring “{{title}}”?",
+      "offBody": "It goes back to normal ranking and loses its badge. New sales no longer carry the {{percent}}% fee.",
+      "keep": "Keep sponsoring",
+      "stop": "Stop sponsoring",
+      "notApproved": "Only approved cheat sheets can be sponsored. Once this one is approved, you can sponsor it from here.",
+      "ok": "OK"
+    },
+    "toasts": {
+      "loadFailed": "Failed to load your cheat sheets",
+      "updateFailed": "Couldn't update the cheat sheet",
+      "hidden": "Hidden from the store",
+      "shown": "Shown in the store",
+      "sponsored": "Sponsorship is on",
+      "unsponsored": "Sponsorship is off"
+    }
+  },
+  "payouts": {
+    "pageTitle": "Payouts",
+    "title": "Payouts",
+    "subtitle": "What you'll be paid, and for what.",
+    "toSheets": "How each sheet is selling",
+    "hero": {
+      "label": "Your payout for {{month}} so far",
+      "paidTo": "Paid around {{date}} to {{bank}}",
+      "paidOn": "Paid around {{date}}"
+    },
+    "status": {
+      "estimated": "Estimate",
+      "issued": "Statement issued",
+      "issuedOn": "Issued {{date}}"
+    },
+    "breakdown": {
+      "collected_one": "Sales collected ({{count}} sale)",
+      "collected_other": "Sales collected ({{count}} sales)",
+      "discounts": "Discounts covered by Peanut",
+      "commission": "Platform commission ({{percent}}%)",
+      "sponsorship": "Sponsorship fees",
+      "payout": "Your payout"
+    },
+    "rate": {
+      "payroll": "as issued",
+      "seller": "your rate",
+      "default": "standard rate"
+    },
+    "bank": {
+      "title": "Paid to",
+      "none": "No bank account on file yet.",
+      "request": "Request a change",
+      "why": "To keep your payouts safe, bank details can't be edited here. Tap “Request a change” and our team will confirm it's you before updating them.",
+      "requestMessage": "Hi, I'd like to change the bank account my payouts go to (currently {{current}}). New details:"
+    },
+    "schedule": "Payouts are sent at the end of each month for that month's sales. The exact date can shift by a day or two.",
+    "statement": {
+      "previous": "Previous month",
+      "next": "Next month",
+      "csv": "Download CSV",
+      "sales_one": "{{count}} sale",
+      "sales_other": "{{count}} sales",
+      "commission": "Commission {{percent}}%",
+      "payout": "Payout",
+      "empty": "No sales this month.",
+      "privacy": "For buyers' privacy, statements show what was sold and when, never who bought it."
+    },
+    "history": {
+      "title": "Monthly history",
+      "empty": "No payouts yet. Your first month will appear here.",
+      "sales_one": "{{count}} sale",
+      "sales_other": "{{count}} sales",
+      "soFar_one": "{{count}} sale so far",
+      "soFar_other": "{{count}} sales so far",
+      "showAll": "Show all {{count}} months",
+      "showLess": "Show fewer months"
+    },
+    "csv": {
+      "order_id": "Order ID",
+      "date": "Date",
+      "cheat_sheet": "Cheat sheet",
+      "course": "Course",
+      "amount": "Amount",
+      "discount_covered": "Discount covered",
+      "commission": "Commission",
+      "sponsorship": "Sponsorship",
+      "payout": "Payout",
+      "total": "Total"
+    },
+    "toasts": {
+      "loadFailed": "Couldn't load your payouts",
+      "statementFailed": "Couldn't load that month's statement"
+    },
+    "mobile": {
+      "discount": "+{{amount}} discount covered",
+      "commission": "−{{amount}} commission",
+      "sponsorship": "−{{amount}} sponsorship"
+    },
+    "chart": {
+      "title": "Payouts by month",
+      "soFar": "so far",
+      "caption": "This month's bar is lighter: it's still an estimate. Click a bar to see that month's statement."
+    }
+  },
+  "studyProfile": {
+    "yearTitle": "What year are you in?",
+    "yearSubtitle": "Set your year of study to see upcoming exam reminders relevant to you.",
+    "yearSaved": "Year level set to {{year}}.",
+    "yearSaveFailed": "Failed to save year level. Please try again.",
+    "title": "What are you studying?",
+    "subtitle": "Pick your program, and your track if you have one. Its exams and cheat sheets come first. You can pick more than one.",
+    "save": "Save",
+    "saving": "Saving...",
+    "skip": "Skip",
+    "dismiss": "Dismiss",
+    "saved": "Saved. Your programs now come first.",
+    "saveFailed": "Could not save. Please try again.",
+    "loadFailed": "Could not load programs.",
+    "optional": "optional",
+    "trackTitle": "Pick your track",
+    "trackSubtitle": "Tracks are open for your program now. Picking one puts its exams and cheat sheets first. It's optional."
+  },
+  "mockExams": {
+    "title": "Mock Exams",
+    "subtitle": "Practice papers built from course material, with answer keys.",
+    "subtitleFor": "Practice papers for {{institution}} courses, built from course material, with answer keys.",
+    "howWeMake": "How we make them",
+    "searchPlaceholder": "Search by course code or name",
+    "filterYear": "Filter by year",
+    "filterType": "Filter by exam type",
+    "allYears": "All years",
+    "allTypes": "All exams",
+    "clearFilters": "Clear filters",
+    "years": {
+      "1st Year": "Year 1",
+      "2nd Year": "Year 2",
+      "3rd Year": "Year 3",
+      "4th Year": "Year 4"
+    },
+    "semesters": {
+      "1st Semester": "Semester 1",
+      "2nd Semester": "Semester 2"
+    },
+    "types": {
+      "Midterm": "Midterm",
+      "Final": "Final",
+      "Quiz": "Quiz"
+    },
+    "accuracy": "Accuracy",
+    "accuracyOf": "Accuracy {{value}} of 4",
+    "accuracyHint": "How closely this mock exam matched the real one, from 1 to 4",
+    "questions": "Questions",
+    "setN": "Set {{n}}",
+    "answerKey": "Answer key",
+    "answerKeySoon": "Answer key coming soon",
+    "comingSoon": "Coming soon",
+    "locked": "Not open yet",
+    "opensOn": "Opens {{date}}",
+    "havePassword": "Have a password?",
+    "empty": "No mock exams yet",
+    "emptyFor": "No mock exams for {{institution}} yet",
+    "noMatch": "No mock exams match",
+    "noMatchBody": "Try another course or clear the filters.",
+    "contribute": {
+      "title": "Want mock exams for your course?",
+      "body": "Build one with the Peanut Mock Exam template and send it to us, and we'll add it to the collection.",
+      "template": "Get the template",
+      "email": "Email us"
+    },
+    "unlock": {
+      "title": "Unlock early access",
+      "body": "Enter the password to open this mock exam before its release date.",
+      "placeholder": "Password",
+      "submit": "Unlock",
+      "checking": "Checking…",
+      "required": "Enter the password.",
+      "wrong": "That password isn't right.",
+      "failed": "Something went wrong. Please try again."
+    }
+  },
+  "birthday": {
+    "pageTitle": "Peanut is 1 🎂",
+    "eyebrow": "You found the secret",
+    "headlineLead": "Peanut is",
+    "lede": "A year of cheat sheets, made by students, for students. Thank you for studying with us. We got you something.",
+    "overLede": "That party's over, but thank you for stopping by. See you at the next one 🥜",
+    "openGift": "Open your gift",
+    "signInToClaim": "Sign in to claim your gift",
+    "signInNote": "Sign in with your student account to get your own code.",
+    "terms": "{{percent}}% off your cart, up to ฿{{cap}} · one use · until {{date}}",
+    "yourCode": "Your birthday code",
+    "welcomeBack": "Welcome back. Your gift is still here",
+    "copy": "Copy",
+    "copied": "Copied",
+    "copyFailed": "Couldn't copy. Select the code instead.",
+    "emailed": "We've emailed it to you too.",
+    "emailedBefore": "It's in your email too.",
+    "emailFailed": "We couldn't email it, so keep it safe from here.",
+    "claimFailed": "Couldn't open your gift. Please try again.",
+    "shop": "Shop cheat sheets",
+    "goToCart": "Go to cart",
+    "blowOut": "Blow out the candle",
+    "relight": "Light the candle again",
+    "candleHint": "Psst… try blowing out the candle.",
+    "searchHint": "Psst… it's someone's birthday 🎂",
+    "celebrate": "Celebrate",
+    "hatHint": "Say it in the search…",
+    "est": "Est. Oct 2025",
+    "age": "1 year old 🎈",
+    "peanutHop": "Make Peanut jump"
+  }
+}

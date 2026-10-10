@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <!-- DEV/STAGING build. api: http://localhost:4000  host: dev.peanutcheatsheets.local  debug: /debug (disable before prod) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#AE5C2A" />
+    <meta name="apple-itunes-app" content="app-id=6790440071" />
+
+    <link rel="preconnect" href="https://storage.googleapis.com" />
+    <link rel="preconnect" href="%REACT_APP_API_URL%" crossorigin />
+    <link rel="preconnect" href="https://lh3.googleusercontent.com" />
+
+    <!-- Google Sans (site-wide typeface) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap" rel="stylesheet" />
+
+    <!-- Primary Meta Tags. Defaults for every route; cheat sheet pages get
+         their own for crawlers via the server (see server/routes/seo.js), and
+         the app sets per-page titles with usePageMeta. No canonical here:
+         this file is served for every route. -->
+    <title>Peanut Cheat Sheets · Student-made cheat sheets</title>
+    <meta
+      name="description"
+      content="Student-made cheat sheets and exam summaries for university courses. Browse by course code, preview before you buy, and pay with PromptPay."
+    />
+    <meta name="keywords" content="cheat sheet, exam summary, study notes, university, course, midterm, final, ชีทสรุป, สรุปเนื้อหา, ชีทสอบ, PromptPay" />
+    <meta name="author" content="The Peanuts" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://cheatsheets.npwitk.com/" />
+    <meta property="og:title" content="Peanut Cheat Sheets · Student-made cheat sheets" />
+    <meta property="og:description" content="Student-made cheat sheets and exam summaries for university courses. Browse by course code, preview before you buy, and pay with PromptPay." />
+    <meta property="og:image" content="https://cheatsheets.npwitk.com/og-image.png" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Peanut Cheat Sheets" />
+    <meta property="og:site_name" content="Peanut Cheat Sheets" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:locale:alternate" content="th_TH" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Peanut Cheat Sheets · Student-made cheat sheets" />
+    <meta name="twitter:description" content="Student-made cheat sheets and exam summaries for university courses. Browse by course code, preview before you buy, and pay with PromptPay." />
+    <meta name="twitter:image" content="https://cheatsheets.npwitk.com/og-image.png" />
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/svg+xml" href="%PUBLIC_URL%/peanut-logo.svg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="%PUBLIC_URL%/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="%PUBLIC_URL%/favicon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="%PUBLIC_URL%/apple-touch-icon.png" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+  </body>
+</html>

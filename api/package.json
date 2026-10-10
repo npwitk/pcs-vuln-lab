@@ -1,0 +1,16 @@
+{
+  "name": "pcs-vuln-lab-api",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Intentionally vulnerable API for CSS484 Assessment 3 (isolated lab only)",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "jsonwebtoken": "^9.0.2",
+    "pg": "^8.11.5"
+  }
+}

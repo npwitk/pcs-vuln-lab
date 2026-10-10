@@ -1,0 +1,47 @@
+/* Maps this app's theme.js tokens onto Stream Chat React's CSS custom
+   properties (stream-chat-react v14). Must be imported AFTER
+   'stream-chat-react/dist/css/index.css'. Values are duplicated from
+   src/styles/theme.js by hand since CSS files can't import JS — keep in
+   sync if theme.js colors change. */
+
+.str-chat.str-chat__theme-light {
+  --str-chat__font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+  --str-chat__typography-font-family-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+
+  --str-chat__accent-primary: #AE5C2A;
+  --str-chat__background-core-app: #FFFFFF;
+  --str-chat__background-core-surface-default: #FFFFFF;
+  --str-chat__background-core-elevation-1: #F5F5F7;
+
+  --str-chat__text-primary: #1D1D1F;
+  --str-chat__text-color: #1D1D1F;
+  --str-chat__text-secondary: #6E6E73;
+
+  --str-chat__border-core-default: #D2D2D7;
+  --str-chat__border-core-subtle: #E5E5EA;
+
+  --str-chat__radius-sm: 6px;
+  --str-chat__radius-md: 10px;
+  --str-chat__radius-lg: 14px;
+}
+
+.str-chat.str-chat__theme-dark {
+  --str-chat__font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+  --str-chat__typography-font-family-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+
+  --str-chat__accent-primary: #D4793D;
+  --str-chat__background-core-app: #0D0D0D;
+  --str-chat__background-core-surface-default: #1A1A1A;
+  --str-chat__background-core-elevation-1: #242424;
+
+  --str-chat__text-primary: #F5F5F7;
+  --str-chat__text-color: #F5F5F7;
+  --str-chat__text-secondary: #A1A1A6;
+
+  --str-chat__border-core-default: #3D3D3D;
+  --str-chat__border-core-subtle: #2D2D2D;
+
+  --str-chat__radius-sm: 6px;
+  --str-chat__radius-md: 10px;
+  --str-chat__radius-lg: 14px;
+}
