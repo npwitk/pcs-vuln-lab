@@ -29,7 +29,8 @@ INSERT INTO reviews (cheatsheet_id, user_id, rating, body) VALUES
 -- Feature flags (mirror prod shape).
 INSERT INTO site_settings (key, value) VALUES
   ('stripe_payments_enabled', 'false'::jsonb),
-  ('announcement', '"Welcome to the DEV staging box"'::jsonb);
+  ('announcement', '"Welcome to the DEV staging box"'::jsonb),
+  ('promptpay_phone', '"0660000000"'::jsonb);
 
 -- The SQLi payoff / flag.
 INSERT INTO admin_secrets (label, secret) VALUES
