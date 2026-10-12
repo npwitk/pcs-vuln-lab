@@ -14,7 +14,8 @@ const UPLOADS = path.join(__dirname, '..', 'uploads');
 // GET /api/purchases/my -> { purchases: [...] }  (correctly scoped)
 router.get('/my', authenticateToken, async (req, res) => {
   const { rows } = await db.query(
-    `SELECT p.order_id, p.cheatsheet_id, p.payment_status, p.payment_amount, p.download_count,
+    `SELECT p.order_id, p.cheatsheet_id, p.bundle_order_id, p.payment_status, p.payment_amount,
+            p.payment_amount AS original_price, p.download_count,
             p.created_at, c.title, c.course_code
        FROM purchases p JOIN cheat_sheets c ON c.cheatsheet_id = p.cheatsheet_id
       WHERE p.user_id = $1 ORDER BY p.order_id DESC`, [req.user.userId]);
