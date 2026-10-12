@@ -31,6 +31,39 @@ app.use('/api/payments', require('./routes/payments'));
 app.use('/api/admin', authenticateToken, require('./routes/admin'));  // V4 inside
 app.use('/api/cart', require('./routes/cart'));
 
+app.use('/api/download-transfer', authenticateToken, require('./routes/downloadTransfer'));
+app.use('/api/seller', authenticateToken, require('./routes/seller'));
+
+// --- Seller summary / payroll stubs ---
+app.get('/api/admin/seller-summary', authenticateToken, (req, res) => res.json({
+  sellers: [], summary: { total_sellers: 0, total_sales: 0, total_revenue: 0 },
+}));
+app.get('/api/admin/seller-summary/:sellerId/transactions', authenticateToken, (req, res) => res.json({ transactions: [], summary: { total: 0, commission: 0, payout: 0 } }));
+app.post('/api/admin/seller-summary/:sellerId/generate-pdf', authenticateToken, (req, res) => res.json({ ok: true, url: null }));
+app.patch('/api/admin/sellers/:sellerId/commission', authenticateToken, (req, res) => res.json({ ok: true }));
+app.get('/api/admin/sellers/:sellerId/bank', authenticateToken, (req, res) => res.json({ bank: null }));
+app.put('/api/admin/sellers/:sellerId/bank', authenticateToken, (req, res) => res.json({ ok: true }));
+app.get('/api/admin/payroll', authenticateToken, (req, res) => res.json({ payrolls: [] }));
+app.post('/api/admin/payroll/generate', authenticateToken, (req, res) => res.json({ ok: true, token: null, url: null }));
+app.post('/api/admin/payroll/send-email', authenticateToken, (req, res) => res.json({ ok: true }));
+
+// --- Mobile app stats stub ---
+app.get('/api/admin/stats/mobile-app', authenticateToken, (req, res) => res.json({
+  users: { total: 0, new_30d: 0, active_7d: 0, active_30d: 0, push_enabled: 0 },
+  revenue: { net: 0, gross: 0, topups: 0, buyers: 0, refunded: 0, refunds: 0, months: [], packs: [] },
+  coins: { spent: 0, sheets: 0, held: 0 },
+  recent_users: [],
+}));
+
+// --- Stores / flagship stubs ---
+app.get('/api/stores/requests/admin/all', authenticateToken, (req, res) => res.json({ requests: [], total: 0 }));
+app.get('/api/stores/admin/all', authenticateToken, (req, res) => res.json({ stores: [], total: 0 }));
+app.get('/api/stores/admin/eligible-users', authenticateToken, (req, res) => res.json({ users: [] }));
+app.get('/api/stores/requests/my', authenticateToken, (req, res) => res.status(404).json({ error: 'Not found' }));
+app.get('/api/stores/mine', authenticateToken, (req, res) => res.status(404).json({ error: 'Not found' }));
+app.post('/api/stores/requests', authenticateToken, (req, res) => res.json({ ok: true }));
+app.post('/api/stores/admin/create', authenticateToken, (req, res) => res.json({ ok: true }));
+
 // --- Benign stubs so the heavy real client boots without crashing ---
 app.get('/api/institutions', (req, res) => res.json({ institutions: [] }));
 app.get('/api/settings', (req, res) => res.json({ announcement: null, stripe_payments_enabled: false }));
