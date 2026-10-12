@@ -38,7 +38,17 @@ router.get('/settings', requireAdmin, async (req, res) => {
   const { rows } = await db.query('SELECT key, value FROM site_settings');
   const out = {}; rows.forEach(r => out[r.key] = r.value); res.json(out);
 });
-router.patch('/settings', requireAdmin, (req, res) => res.json({ ok: true }));
+router.patch('/settings', requireAdmin, async (req, res) => {
+  const updates = req.body || {};
+  await Promise.all(Object.entries(updates).map(([key, val]) =>
+    db.query(
+      `INSERT INTO site_settings (key, value, updated_at) VALUES ($1, $2::jsonb, NOW())
+       ON CONFLICT (key) DO UPDATE SET value = $2::jsonb, updated_at = NOW()`,
+      [key, JSON.stringify(val)]
+    )
+  ));
+  res.json({ ok: true });
+});
 router.get('/purchases', requireAdmin, async (req, res) => {
   const { rows } = await db.query('SELECT order_id, user_id, cheatsheet_id, payment_status, payment_amount, created_at FROM purchases ORDER BY order_id DESC');
   res.json({ purchases: rows, total: rows.length });

@@ -25,17 +25,18 @@ router.get('/my-review/:id', authenticateToken, async (req, res) => {
 });
 
 // VULN(V6) -- stored XSS. Body stored verbatim; rendered UNESCAPED client-side.
-// Client sends { cheatsheet_id, rating, comment }. Upsert (createOrUpdate).
+// Accepts both field names: "body" (raw API / exploit scripts) and "comment" (React client).
 router.post('/', authenticateToken, async (req, res) => {
-  const { cheatsheet_id, rating, comment } = req.body || {};
+  const { cheatsheet_id, rating, body, comment } = req.body || {};
+  const reviewBody = body || comment || '';
   const existing = await db.queryOne('SELECT review_id FROM reviews WHERE cheatsheet_id = $1 AND user_id = $2', [cheatsheet_id, req.user.userId]);
   if (existing) {
-    await db.query('UPDATE reviews SET rating = $1, body = $2 WHERE review_id = $3', [rating || 5, comment || '', existing.review_id]);
+    await db.query('UPDATE reviews SET rating = $1, body = $2 WHERE review_id = $3', [rating || 5, reviewBody, existing.review_id]);
     return res.json({ review_id: existing.review_id });
   }
   const row = await db.queryOne(
     'INSERT INTO reviews (cheatsheet_id, user_id, rating, body) VALUES ($1,$2,$3,$4) RETURNING review_id',
-    [cheatsheet_id, req.user.userId, rating || 5, comment || '']);
+    [cheatsheet_id, req.user.userId, rating || 5, reviewBody]);
   res.status(201).json({ review_id: row.review_id });
 });
 
