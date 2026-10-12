@@ -54,4 +54,48 @@ router.get('/purchases', requireAdmin, async (req, res) => {
   res.json({ purchases: rows, total: rows.length });
 });
 
+router.post('/payments/:orderId/approve', requireAdmin, async (req, res) => {
+  const row = await db.queryOne(
+    "UPDATE purchases SET payment_status='paid' WHERE order_id=$1 RETURNING order_id, payment_status",
+    [req.params.orderId]);
+  if (!row) return res.status(404).json({ error: 'Order not found' });
+  res.json({ ok: true, ...row });
+});
+
+router.post('/payments/:orderId/reject', requireAdmin, async (req, res) => {
+  const row = await db.queryOne(
+    "UPDATE purchases SET payment_status='rejected' WHERE order_id=$1 RETURNING order_id, payment_status",
+    [req.params.orderId]);
+  if (!row) return res.status(404).json({ error: 'Order not found' });
+  res.json({ ok: true, ...row });
+});
+
+router.post('/payments/bundles/:bundleId/approve', requireAdmin, async (req, res) => {
+  await db.query(
+    "UPDATE purchases SET payment_status='paid' WHERE bundle_order_id=$1",
+    [req.params.bundleId]);
+  res.json({ ok: true });
+});
+
+router.post('/payments/bundles/:bundleId/reject', requireAdmin, async (req, res) => {
+  await db.query(
+    "UPDATE purchases SET payment_status='rejected' WHERE bundle_order_id=$1",
+    [req.params.bundleId]);
+  res.json({ ok: true });
+});
+
+router.get('/payments/pending', requireAdmin, async (req, res) => {
+  const { rows } = await db.query(`
+    SELECT p.order_id, p.bundle_order_id, p.payment_amount, p.payment_amount AS original_price,
+           p.created_at AS purchase_date, false AS is_stripe, NULL AS discount_code,
+           u.name AS user_name, u.email AS user_email, NULL AS user_avatar,
+           c.title, c.course_code
+      FROM purchases p
+      JOIN users u ON u.user_id = p.user_id
+      JOIN cheat_sheets c ON c.cheatsheet_id = p.cheatsheet_id
+     WHERE p.payment_status = 'pending'
+     ORDER BY p.created_at DESC`);
+  res.json({ payments: rows, total: rows.length });
+});
+
 module.exports = router;
