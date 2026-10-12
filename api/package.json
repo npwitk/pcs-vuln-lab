@@ -12,6 +12,7 @@
     "express": "^4.19.2",
     "jsonwebtoken": "^9.0.2",
     "pg": "^8.11.5",
+    "promptpay-qr": "^0.5.0",
     "qrcode": "^1.5.4"
   }
 }

@@ -1,7 +1,11 @@
 const express = require('express');
+const path = require('path');
+const fs = require('fs');
 const db = require('../config/database');
-const { optionalAuth } = require('../middleware/auth');
+const { authenticateToken, optionalAuth } = require('../middleware/auth');
 const router = express.Router();
+
+const UPLOADS_DIR = path.join(__dirname, '../../uploads');
 
 // Validate integer URL params -> clean 404 (not an integer-cast crash).
 router.param('id', (req, res, next, v) => /^\d+$/.test(v) ? next() : res.status(404).json({ error: 'Not found' }));
@@ -23,6 +27,43 @@ function cardFields(r, statusMap) {
     in_library: st === 'paid',
   };
 }
+
+// POST /api/cheatsheets/upload-url -> { uploadUrl, objectPath }
+router.post('/upload-url', authenticateToken, (req, res) => {
+  const { course_code } = req.body || {};
+  const filename = `${(course_code || 'sheet').replace(/[^a-zA-Z0-9]/g, '_')}_${Date.now()}.pdf`;
+  res.json({
+    uploadUrl: `http://localhost:4000/api/cheatsheets/upload-file/${filename}`,
+    objectPath: `local/${filename}`,
+  });
+});
+
+// PUT /api/cheatsheets/upload-file/:filename -> receives raw PDF, saves to uploads/
+router.put('/upload-file/:filename',
+  express.raw({ type: '*/*', limit: '50mb' }),
+  (req, res) => {
+    const filename = path.basename(req.params.filename);
+    fs.writeFile(path.join(UPLOADS_DIR, filename), req.body, (err) => {
+      if (err) return res.status(500).json({ error: 'Write failed', detail: err.message });
+      res.json({ ok: true });
+    });
+  }
+);
+
+// POST /api/cheatsheets -> save metadata, return new cheat_sheet row
+router.post('/', authenticateToken, async (req, res) => {
+  const { title, description, course_code, price, pdf_object_path } = req.body || {};
+  const filename = (pdf_object_path || '').replace('local/', '');
+  const file_path = filename ? `uploads/${filename}` : 'uploads/placeholder.pdf';
+  const row = await db.queryOne(
+    `INSERT INTO cheat_sheets (title, description, course_code, price, file_path, preview_text, created_by)
+     VALUES ($1, $2, $3, $4, $5, $6, $7)
+     RETURNING cheatsheet_id, title, description, course_code, price, file_path, created_at`,
+    [title || '', description || '', course_code || '', parseFloat(price) || 0,
+     file_path, (description || '').slice(0, 200), req.user.userId]
+  );
+  res.status(201).json({ cheat_sheet: { ...row, exam_types: [], supplementary_files: [] } });
+});
 
 // GET /api/cheatsheets  -> { cheat_sheets: [...], total }
 router.get('/', optionalAuth, async (req, res) => {
