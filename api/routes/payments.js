@@ -1,11 +1,18 @@
 const express = require('express');
+const QRCode = require('qrcode');
+const generatePayload = require('promptpay-qr');
 const db = require('../config/database');
 const { authenticateToken } = require('../middleware/auth');
 const router = express.Router();
 
 router.param('orderId', (req, res, next, v) => /^\d+$/.test(v) ? next() : res.status(404).json({ error: 'Not found' }));
 
-const FAKE_QR = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNk+M8AAAMBAQDJ/pLvAAAAAElFTkSuQmCC';
+async function generateQR(amount) {
+  const row = await db.queryOne("SELECT value FROM site_settings WHERE key = 'promptpay_phone'");
+  const phone = row ? row.value : '0660000000';
+  const payload = generatePayload(phone, { amount: parseFloat(amount) || 0 });
+  return QRCode.toDataURL(payload, { width: 300, margin: 2, color: { dark: '#000000', light: '#ffffff' } });
+}
 
 // VULN(V5) -- payment bypass: flip to 'paid' with no verification / no authz
 // beyond being logged in. (curl/Burp exploit.)
@@ -24,24 +31,34 @@ router.post('/create', authenticateToken, async (req, res) => {
   let order = await db.queryOne('SELECT order_id FROM purchases WHERE user_id=$1 AND cheatsheet_id=$2', [req.user.userId, cheatsheet_id]);
   if (!order) order = await db.queryOne(
     `INSERT INTO purchases (user_id, cheatsheet_id, payment_status, payment_amount, qr_code_data)
-     VALUES ($1,$2,'pending',$3,'static-qr') RETURNING order_id`, [req.user.userId, cheatsheet_id, sheet.price]);
-  res.json({ purchase: { order_id: order.order_id, amount: sheet.price, qr_code: FAKE_QR },
+     VALUES ($1,$2,'pending',$3,'dynamic') RETURNING order_id`, [req.user.userId, cheatsheet_id, sheet.price]);
+  const qr = await generateQR(sheet.price);
+  res.json({ purchase: { order_id: order.order_id, amount: sheet.price, qr_code: qr },
     instructions: 'Scan the PromptPay QR to pay (manual approval in prod).' });
 });
+
 router.get('/status/:orderId', authenticateToken, async (req, res) => {
   const row = await db.queryOne('SELECT payment_status FROM purchases WHERE order_id=$1', [req.params.orderId]);
   const st = row ? row.payment_status : 'pending';
   res.json({ status: st, payment_status: st });
 });
-router.get('/qr/:orderId', authenticateToken, (req, res) => res.json({ qr_code: FAKE_QR, amount: 0 }));
+
+router.get('/qr/:orderId', authenticateToken, async (req, res) => {
+  const order = await db.queryOne('SELECT payment_amount FROM purchases WHERE order_id=$1', [req.params.orderId]);
+  const qr = await generateQR(order ? order.payment_amount : 0);
+  res.json({ qr_code: qr, amount: order ? order.payment_amount : 0 });
+});
 
 // Bundle (cart checkout) create + status. A bundle is the set of purchases
 // sharing bundle_order_id; it reads 'paid' once all its members are paid.
 router.post('/create-bundle', authenticateToken, async (req, res) => {
   const { bundle_order_id } = req.body || {};
   const t = await db.queryOne('SELECT COALESCE(SUM(payment_amount),0)::float AS v FROM purchases WHERE bundle_order_id=$1 AND user_id=$2', [bundle_order_id, req.user.userId]);
-  res.json({ bundle: { order_id: bundle_order_id, qr_code: FAKE_QR, amount: t ? t.v : 0 } });
+  const total = t ? t.v : 0;
+  const qr = await generateQR(total);
+  res.json({ bundle: { order_id: bundle_order_id, qr_code: qr, amount: total } });
 });
+
 router.get('/bundle-status/:bundleId', authenticateToken, async (req, res) => {
   const { rows } = await db.query('SELECT payment_status FROM purchases WHERE bundle_order_id=$1 AND user_id=$2', [req.params.bundleId, req.user.userId]);
   const paid = rows.length > 0 && rows.every(r => r.payment_status === 'paid');
