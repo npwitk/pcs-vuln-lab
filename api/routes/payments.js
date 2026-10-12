@@ -1,5 +1,6 @@
 const express = require('express');
 const QRCode = require('qrcode');
+const generatePayload = require('promptpay-qr');
 const db = require('../config/database');
 const { authenticateToken } = require('../middleware/auth');
 const router = express.Router();
@@ -8,9 +9,9 @@ router.param('orderId', (req, res, next, v) => /^\d+$/.test(v) ? next() : res.st
 
 async function generateQR(amount) {
   const row = await db.queryOne("SELECT value FROM site_settings WHERE key = 'promptpay_phone'");
-  const phone = row ? JSON.parse(row.value) : '0660000000';
-  const text = `PromptPay:${phone}:THB:${amount}`;
-  return QRCode.toDataURL(text, { width: 300, margin: 2, color: { dark: '#000000', light: '#ffffff' } });
+  const phone = row ? row.value : '0660000000';
+  const payload = generatePayload(phone, { amount: parseFloat(amount) || 0 });
+  return QRCode.toDataURL(payload, { width: 300, margin: 2, color: { dark: '#000000', light: '#ffffff' } });
 }
 
 // VULN(V5) -- payment bypass: flip to 'paid' with no verification / no authz
