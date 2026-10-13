@@ -64,9 +64,12 @@ router.get('/:orderId/download', authenticateToken, async (req, res) => {
   if (row.payment_status !== 'paid') return res.status(402).json({ error: 'Not paid' });
   await db.query('INSERT INTO download_logs (order_id, user_id, download_ip, user_agent) VALUES ($1,$2,$3,$4)',
     [row.order_id, req.user.userId, req.ip, req.headers['user-agent'] || '']);
-  const file = path.join(UPLOADS, path.basename(row.file_path));
+  // The exported catalogue points at (unreachable) production storage paths, so
+  // fall back to the bundled mock PDF -- every sheet still downloads a real file.
+  let file = path.join(UPLOADS, path.basename(row.file_path));
+  if (!fs.existsSync(file)) file = path.join(UPLOADS, 'sample-cheatsheet.pdf');
   if (!fs.existsSync(file)) return res.json({ note: 'PDF placeholder', served_file: row.file_path, title: row.title });
-  res.download(file);
+  res.download(file, `${row.title}.pdf`);
 });
 
 module.exports = router;

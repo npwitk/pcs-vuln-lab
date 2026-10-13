@@ -18,19 +18,61 @@ CREATE TABLE IF NOT EXISTS users (
   created_at     TIMESTAMP DEFAULT NOW()
 );
 
+-- Institutions (schools). The real catalogue is tagged by institution so the
+-- card can show a school logo/short-name next to the course code.
+CREATE TABLE IF NOT EXISTS institutions (
+  institution_id SERIAL PRIMARY KEY,
+  name           VARCHAR(200),
+  short_name     VARCHAR(50),
+  logo_filename  VARCHAR(300)             -- bare file in web/public/logos/ or a full URL
+);
+
+-- Column set mirrors the production cheat_sheets table so the REAL exported
+-- catalogue (db/03-cheatsheets.sql) loads verbatim and the UI renders like the
+-- live site (preview covers, exam-type pills, page count, file size, etc.).
+-- NOTE: created_by / approved_by / institution_id are plain INTEGERs (no FK)
+-- on purpose -- the exported rows carry production user ids that don't exist in
+-- this lab's tiny seed, and we don't want a FK to reject the import.
 CREATE TABLE IF NOT EXISTS cheat_sheets (
-  cheatsheet_id  SERIAL PRIMARY KEY,
-  title          VARCHAR(300) NOT NULL,
-  description    TEXT,
-  course_code    VARCHAR(50),
-  price          DECIMAL(10,2) DEFAULT 0,
-  file_path      VARCHAR(500) NOT NULL,   -- local uploads/ path in this lab (prod = private GCS)
-  preview_text   TEXT,
-  created_by     INTEGER REFERENCES users(user_id),
-  is_active      BOOLEAN DEFAULT TRUE,
-  view_count     INTEGER DEFAULT 0,
-  purchase_count INTEGER DEFAULT 0,
-  created_at     TIMESTAMP DEFAULT NOW()
+  cheatsheet_id            SERIAL PRIMARY KEY,
+  title                    VARCHAR(300) NOT NULL,
+  description              TEXT,
+  course_code              VARCHAR(50),
+  semester                 VARCHAR(20),
+  academic_year            VARCHAR(20),
+  year_level               VARCHAR(40),
+  exam_type                VARCHAR(40),
+  price                    DECIMAL(10,2) DEFAULT 0,
+  file_path                VARCHAR(500) NOT NULL,   -- local uploads/ path in this lab (prod = private GCS)
+  file_hash                TEXT,
+  file_version             INTEGER DEFAULT 1,
+  file_version_history     JSONB,
+  file_size_mb             DECIMAL(10,2),
+  page_count               INTEGER,
+  preview_image_path       TEXT,
+  preview_text             TEXT,
+  youtube_links            JSONB,
+  exclusive_content        TEXT,
+  is_active                BOOLEAN DEFAULT TRUE,
+  is_sponsored             BOOLEAN DEFAULT FALSE,
+  sponsored_at             TIMESTAMP,
+  approval_status          VARCHAR(20) DEFAULT 'approved',
+  approved_by              INTEGER,
+  approved_at              TIMESTAMP,
+  rejection_reason         TEXT,
+  view_count               INTEGER DEFAULT 0,
+  purchase_count           INTEGER DEFAULT 0,
+  created_by               INTEGER,
+  institution_id           INTEGER,
+  release_at               TIMESTAMP,
+  created_at               TIMESTAMP DEFAULT NOW(),
+  updated_at               TIMESTAMP DEFAULT NOW(),
+  full_preview_enabled     BOOLEAN DEFAULT FALSE,
+  full_preview_generated_at TIMESTAMP,
+  institution_restricted   BOOLEAN DEFAULT FALSE,
+  preview_3d_front_path    TEXT,
+  preview_3d_back_path     TEXT,
+  exam_types               TEXT[]
 );
 
 CREATE TABLE IF NOT EXISTS purchases (
